@@ -1,0 +1,53 @@
+{
+  "name": "piprobabilitytree",
+  "version": "0.1.0",
+  "description": "Create an svg probabiltiy tree",
+  "type": "module",
+  "main": "dist/piprobabilitytree.js",
+  "module": "dist/piprobabilitytree.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/piprobabilitytree.js",
+      "require": "./dist/piprobabilitytree.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+
+  "scripts": {
+    "test": "vitest",
+    "dev": "vite serve",
+    "build": "tsc --p ./tsconfig-build.json && vite build",
+    "preview": "vite preview",
+    "dependency-cruise": "dependency-cruise -T dot -x node_modules -v -- src/index.ts  | dot -T svg > dependencies.svg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basilgass/PiProbabilityTree.git"
+  },
+  "author": "Basil gass",
+  "license": "MIT",
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.2.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/eslint__js": "^8.42.3",
+    "autoprefixer": "^10.4.20",
+    "dependency-cruiser": "^16.8.0",
+    "eslint": "^9.17.0",
+    "globals": "^15.13.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.1",
+    "vite": "^6.0.3",
+    "vite-plugin-dts": "^4.3.0",
+    "vitest": "^2.1.8"
+  }
+}
